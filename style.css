@@ -1,0 +1,106 @@
+:root{color-scheme:dark;--ink:#100e0d;--paper:#ede4da;--gold:#cba58e;--muted:#aa9587;--turn:1600ms;--fade:900ms;font-family:Georgia,'Times New Roman',serif;background:var(--ink);color:var(--paper)}
+*{box-sizing:border-box}body{margin:0}button{font:inherit;color:inherit;-webkit-tap-highlight-color:transparent}button:focus-visible{outline:1px solid var(--gold);outline-offset:8px}button{cursor:pointer}main{position:relative;min-height:700px;height:100svh;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 35%,#2d201a55 0%,transparent 52%),var(--ink)}
+.opening{position:absolute;inset:0;z-index:10;border:0;background:#0b0a09;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transition:opacity 1.2s; width:100%;}.opening-rule{height:44px;width:1px;background:linear-gradient(transparent,var(--gold));margin-bottom:4px}.dedication{font-size:clamp(34px,7vw,52px);font-weight:400;letter-spacing:-.035em}.eyebrow{font:400 12px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}.opening .eyebrow{font-size:11px;letter-spacing:.22em;color:var(--muted)}.opening.dismissed{opacity:0;pointer-events:none}
+.experience-header{position:absolute;left:28px;right:28px;top:max(28px,env(safe-area-inset-top));display:flex;justify-content:space-between;font:10px/1.5 -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);opacity:0;transition:opacity 1.5s}.experience-header span:last-child{margin-right:82px}.quiet-control{background:none;border:0;font:11px/1.5 -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:.12em;color:var(--muted);padding:14px 8px;min-height:44px}.sound{position:absolute;right:20px;top:max(15px,calc(env(safe-area-inset-top) - 13px));z-index:5}.sound:disabled{cursor:default;opacity:.55}.jewel-stage{position:absolute;top:12%;height:42%;left:0;width:100%;perspective:900px;opacity:0;transition:opacity 1.5s;}
+.halo{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 65%,#bb765222,transparent 58%);transition:opacity 2s}
+.pendant-wrap{position:absolute;left:50%;top:27%;height:64%;width:28px;transform:translateX(-50%) rotate(var(--pendant-tilt));transform-style:preserve-3d}.bail{position:absolute;top:-16px;left:8px;width:12px;height:20px;border:2px solid #b78569;border-radius:7px;box-shadow:1px 0 0 #f0cfaf}.pendant{width:28px;height:100%;position:relative;transform-style:preserve-3d;transform:rotateY(-18deg);transition:transform var(--turn) cubic-bezier(.45,0,.2,1)}.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center;border:1px solid #e6bba171;background:linear-gradient(90deg,#805141,#d7a58a 19%,#b57e65 65%,#e3baa0);box-shadow:inset 2px 0 3px #ffdbb750,inset -2px 0 3px #613c35aa}.face span{writing-mode:vertical-rl;font-size:10px;letter-spacing:.12em;color:#624131;text-shadow:0 1px #f4c9a566}/* Fixed pendant sides: front Catherine, right Cool, back Karson, left Birthday 2026. */
+.front{transform:translateZ(14px)}.back{transform:rotateY(180deg) translateZ(14px)}.right{transform:rotateY(-90deg) translateZ(14px)}.left{transform:rotateY(90deg) translateZ(14px)}.cap{position:absolute;bottom:-14px;width:28px;height:28px;background:#805340;transform:rotateX(90deg)}
+.chapter{position:absolute;top:59%;left:24px;right:24px;text-align:center;opacity:0;transform:translateY(12px);transition:opacity var(--fade),transform var(--fade);}.chapter.visible{opacity:1;transform:translateY(0)}.chapter .eyebrow{margin:0 0 15px}.chapter h1{font-size:clamp(38px,10vw,64px);font-weight:400;letter-spacing:-.04em;line-height:1.1;margin:0 0 24px}.message{font-size:17px;line-height:1.8;color:#c2b2a6;max-width:330px;margin:0 auto;text-wrap:pretty}.message em{font-style:normal;color:var(--paper);border-bottom:1px solid #cba58e70;padding-bottom:3px}.progress{position:absolute;bottom:max(75px,calc(env(safe-area-inset-bottom) + 45px));left:50%;transform:translateX(-50%);display:flex;gap:9px;opacity:0;transition:opacity 1s}.progress span{width:24px;height:1px;background:#534037;transition:background 1s}.progress span.active{background:var(--gold)}.footer-mark{position:absolute;bottom:max(26px,env(safe-area-inset-bottom));width:100%;text-align:center;font-size:12px;letter-spacing:.25em;color:#907464;opacity:0;transition:opacity 1s}.footer-mark span{margin:0 10px;color:#5e4639}
+.collection,.closing-panel{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 24px;opacity:0;visibility:hidden;transition:opacity 1.4s,visibility 1.4s}.collection{gap:25px;font-size:clamp(26px,7vw,40px);letter-spacing:-.025em}.collection span:nth-child(even){color:var(--gold)}.closing-panel p{margin:0}.closing-panel.meaning{font-size:clamp(24px,6vw,34px);line-height:1.8;letter-spacing:-.025em}.closing-panel.meaning p:last-child{max-width:300px;color:var(--gold);margin-top:18px}.visible.collection,.visible.closing-panel{opacity:1;visibility:visible}.final h1{font-size:clamp(38px,10vw,62px);font-weight:400;line-height:1.14;letter-spacing:-.04em;max-width:520px;margin:28px 0 30px}.final h1:focus{outline:none}.final .signature{white-space:pre-line;font-size:21px;line-height:1.6;margin-top:35px;color:var(--gold);font-style:italic}.replay{margin-top:28px;border-bottom:1px solid #655044;padding-bottom:5px;min-height:44px}main[data-state="playing"] .experience-header,main[data-state="playing"] .jewel-stage,main[data-state="playing"] .progress,main:not([data-state="closed"]) .footer-mark{opacity:1}main[data-state="closing"] .jewel-stage{opacity:.12}main[data-state="closing"] .halo{opacity:0}main[data-state="final"] .jewel-stage{opacity:0}.no-script{position:absolute;z-index:20;inset:0;background:var(--ink);padding:30vh 30px;text-align:center;line-height:2}
+@media(min-width:700px){.jewel-stage{height:44%;top:10%}.pendant-wrap{width:32px}.experience-header{left:48px;right:48px}.sound{right:40px}.message{max-width:390px}.chapter{top:59%}}
+@media(max-height:740px) and (orientation:portrait){main{min-height:560px}.jewel-stage{top:12%;height:37%}.chapter{top:54%}.chapter h1{margin-bottom:18px}.progress{bottom:65px}.final h1{margin:18px 0 22px}.final .signature{margin-top:24px}.replay{margin-top:15px}}
+@media(orientation:landscape) and (max-height:600px){main{min-height:360px}.jewel-stage{left:8%;width:32%;top:15%;height:67%}.chapter{left:43%;right:7%;top:30%}.chapter h1{font-size:40px;margin-bottom:16px}.message{font-size:16px}.progress{left:66%;bottom:40px}.footer-mark{width:40%;bottom:25px}.final{padding:35px 24px}.final h1{font-size:34px;margin:12px 0}.final .signature{margin-top:12px;font-size:17px}.final .message{line-height:1.5;max-width:470px}.replay{margin-top:4px}.collection{gap:10px;font-size:28px}.closing-panel.meaning{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.pendant{transition:none;transform:none!important}.face{display:none}.face.current{display:flex;transform:translateZ(0)}.cap{display:none}.chapter{transform:none;transition:opacity var(--fade)}.chapter.visible{transform:none}.pendant-wrap{--pendant-tilt:0deg} }
+
+
+
+
+[hidden]{display:none!important}
+.chapter{visibility:hidden;transition:opacity var(--fade),transform var(--fade),visibility var(--fade)}
+.chapter.visible{visibility:visible}
+@media(min-width:700px){.pendant-wrap{width:28px}}
+/* Every paragraph now waits for a tap on the page. */
+.advance{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0;border:0;background:transparent;touch-action:manipulation}
+.advance:disabled{cursor:default}.advance:focus-visible{outline-offset:-12px}
+.chapter{pointer-events:none}.chapter .message{max-width:370px;font-size:clamp(19px,5.2vw,24px);line-height:1.7}
+.chapter h1{max-width:520px;margin:0 auto;font-size:clamp(38px,10vw,60px)}
+.tap-hint{position:absolute;bottom:max(28px,calc(env(safe-area-inset-bottom) + 12px));left:0;right:0;margin:0;text-align:center;font:11px/1.5 -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:.15em;color:var(--muted);opacity:0;transition:opacity var(--fade);pointer-events:none}
+.tap-hint.ready{opacity:1}
+.replay{position:absolute;z-index:5;left:50%;transform:translateX(-50%);bottom:max(18px,calc(env(safe-area-inset-bottom) + 6px));margin:0}
+@media(max-height:740px) and (orientation:portrait){.chapter{top:52%}.chapter .message{font-size:18px;line-height:1.65}.progress{bottom:77px}}
+@media(orientation:landscape) and (max-height:600px){.chapter{top:26%}.chapter .message{font-size:19px;line-height:1.6}.tap-hint{left:40%;bottom:16px}.progress{bottom:55px}.replay{left:66%;bottom:6px}}
+@media(prefers-reduced-motion:reduce){.chapter,.chapter.visible{transform:none}.jewel-stage,.opening{transition:opacity var(--fade)}}
+
+/* The two introduction steps contain only centered text. */
+main[data-state="intro"] .chapter{top:50%;left:24px;right:24px;transform:translateY(-50%)}
+main[data-state="intro"] .tap-hint{left:0;right:0}
+.jewel-stage:not([hidden]){animation:pendant-reveal var(--pendant-reveal,1500ms) ease both}
+@keyframes pendant-reveal{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.jewel-stage:not([hidden]){animation-duration:var(--fade)}}
+
+/* Chain and bail share one attachment point, including while the bar rotates. */
+.pendant-wrap{
+  --pendant-tilt:-7deg;
+  --attachment-y:-14px;
+  transform-origin:50% var(--attachment-y);
+}
+.suspension{
+  position:absolute;
+  left:50%;
+  top:var(--attachment-y);
+  width:0;
+  height:0;
+  transform:rotate(calc(-1 * var(--pendant-tilt)));
+  transform-origin:0 0;
+  opacity:.7;
+}
+.suspension::before,.suspension::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:1px;
+  height:max(320px,70svh);
+  background:linear-gradient(#80634888,#d3ae85bb);
+  transform-origin:50% 100%;
+}
+.suspension::before{transform:rotate(-24deg)}
+.suspension::after{transform:rotate(24deg)}
+.bail{top:calc(var(--attachment-y) - 2px);left:50%;transform:translateX(-50%)}
+
+/* Leave room below each engraving for the two grooves near the end cap. */
+.face span{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);white-space:nowrap}
+.face::before,.face::after{
+  content:'';
+  position:absolute;
+  left:-1px;
+  right:-1px;
+  height:2px;
+  background:linear-gradient(#613b30cc,#be8b70);
+  box-shadow:0 1px 0 #f5cfb38c;
+}
+.face::before{bottom:11%}
+.face::after{bottom:16%}
+
+/* A small round-cut stone in a rose-gold setting, only on Catherine's face. */
+.diamond{
+  position:absolute;
+  top:73%;
+  left:50%;
+  width:11px;
+  height:11px;
+  transform:translate(-50%,-50%);
+  border:1px solid #ecc5a9;
+  border-radius:3px;
+  background:#886a57;
+  box-shadow:0 1px 2px #4a302a88;
+}
+.diamond::before{
+  content:'';
+  position:absolute;
+  inset:1px;
+  border-radius:50%;
+  background:conic-gradient(from 20deg,#fffdf5 0deg 45deg,#8f9ca5 45deg 90deg,#eaf1f3 90deg 140deg,#a2adb8 140deg 185deg,#fffefa 185deg 230deg,#84939f 230deg 275deg,#e1e9ef 275deg 315deg,#fdfcfa 315deg);
+  box-shadow:inset 0 0 0 1px #f9fcff80;
+}
+@media(prefers-reduced-motion:reduce){.pendant-wrap{--pendant-tilt:0deg}}
