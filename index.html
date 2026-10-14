@@ -5,19 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#100e0d">
   <meta name="description" content="Four sides. Four little meanings. A birthday gift for Catherine.">
+  <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
   <title>For Catherine</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23100e0d'/%3E%3Crect x='13' y='5' width='6' height='22' rx='1' fill='%23c4937e'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css?v=pendant-details-7">
-  <script src="script.js?v=pendant-details-7" defer></script>
+  <link rel="preload" as="image" href="assets/photos/memory-01.jpg">
+  <link rel="stylesheet" href="style.css?v=password-preview-1">
+  <script src="script.js?v=password-preview-1" defer></script>
 </head>
 <body>
-  <main id="experience" data-state="closed">
+  <section id="password-gate" class="password-gate" aria-labelledby="gift-title">
+    <form id="unlock-form" class="unlock-form" autocomplete="off" novalidate>
+      <p class="eyebrow gate-dedication">FOR CATHERINE</p>
+      <span class="opening-rule" aria-hidden="true"></span>
+      <h1 id="gift-title">A Little Something For You</h1>
+      <p id="gate-prompt" class="gate-prompt">Enter the secret password to open your gift.</p>
+      <label for="gift-password">Secret password</label>
+      <input id="gift-password" type="password" inputmode="numeric" enterkeyhint="go" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="gate-prompt password-error">
+      <button id="unlock-gift" type="submit">Unlock My Gift</button>
+      <p id="password-error" class="password-error" role="alert" aria-live="polite"></p>
+    </form>
+  </section>
+  <main id="experience" data-state="closed" inert aria-hidden="true">
     <button id="opening" class="opening" aria-label="Open your birthday gift">
       <span class="opening-rule" aria-hidden="true"></span>
       <span id="dedication" class="dedication"></span>
       <span id="open-label" class="eyebrow"></span>
     </button>
     <button id="sound" class="quiet-control sound" hidden aria-pressed="false">Sound off</button>
+    <button id="pause" class="quiet-control pause" hidden aria-pressed="false">Pause</button>
+    <section id="cinema" class="cinema" hidden aria-label="Our birthday story">
+      <div id="photo-stage" class="photo-stage" hidden>
+        <figure class="photo-layer"><img alt=""><figcaption hidden></figcaption></figure>
+        <figure class="photo-layer"><img alt=""><figcaption hidden></figcaption></figure>
+      </div>
+      <div id="story-copy" class="story-copy" aria-live="polite" aria-atomic="true"></div>
+    </section>
     <div class="jewel-stage" aria-hidden="true" hidden>
       <div class="halo"></div>
       <div class="pendant-wrap">
